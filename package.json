@@ -1,0 +1,18 @@
+{
+	"name": "solion",
+	"module": "src/mod.ts",
+	"type": "module",
+	"types": "target/cjs/mod.d.ts",
+	"main": "target/cjs/mod.ts",
+	"dependencies": {
+		"@tokyo/dappnet": "npm:@jsr/tokyo__dappnet",
+		"@tokyo/reliq": "npm:@jsr/tokyo__reliq"
+	},
+	"devDependencies": {
+		"@types/bun": "latest",
+		"tsup": "8.4.0"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	}
+}
