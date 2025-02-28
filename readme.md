@@ -1,15 +1,30 @@
-# solion
-
-To install dependencies:
-
-```bash
-bun install
+# Solion
+## A Type-Safe Solidity Compiler
+```ts
+Compiler().compile({
+    language: "Solidity",
+    sources: {
+        "counter": {
+            content: `
+                /// ...
+            `
+        },
+    },
+    settings: {
+        optimizer: {
+            enabled: true,
+            runs: 200
+        },
+        evmVersion: "istanbul",
+        outputSelection: {
+            "*": {
+                "*": [
+                    "abi",
+                    "ast",
+                    "evm.bytecode.object",
+                ],
+            },
+        },
+    }
+})
 ```
-
-To run:
-
-```bash
-bun run src/mod.ts
-```
-
-This project was created using `bun init` in bun v1.1.38. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
